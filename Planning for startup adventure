@@ -1,0 +1,24 @@
+Planning for startup adventure
+
+
+Card is an empty shell
+Function to inject data into the card
+Function to add or subtract value (users) from the global object
+Managing options
+
+[
+{
+	title: "my card",
+	description: "card desc",
+	options: [
+		{
+			title: 'get investment money',
+			value: '1000'
+		},
+		{
+			title: 'take out a second mortgage'
+			value: -500,
+		}
+	]
+}
+]
