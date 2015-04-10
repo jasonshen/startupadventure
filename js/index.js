@@ -14,7 +14,6 @@ $(function () {
 
 	var data = window.data
 
-	alert(data.coord.lon);
 
 	$(".status").text("Users: " + startup.users + " and Runway: " + startup.runway + " months left");
 
