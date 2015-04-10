@@ -47,15 +47,15 @@ body {
 
 /* Center the container */
 #container {
-     width: 400px;
+     width: 450px;
      margin: 0px auto;
 }
 
 
 .card {
      background: #FFF;
-     width: 400px;
-     margin: 30px auto;
+     width: 450px;
+     margin: 10px auto;
      padding: 30px;
      -webkit-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
      -moz-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
@@ -63,10 +63,15 @@ body {
      display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
      .card {
           background: #000;
-          width: 500px;
+          width: 350px;
+     }
+
+     #container {
+          width: 350px;
+          margin: 0px auto;
      }
 
 }
