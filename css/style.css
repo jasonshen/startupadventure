@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700|Titillium+Web:400,700);
+
+
 /******************************************
 /* SETUP                   
 /*******************************************/
@@ -34,10 +37,14 @@
 
 body {
      color: #000;
-     background: #DAD8A7;
-     font-size: 20px;
-     line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
+     background: #FFF;
+     font-size: 0.95em;
+     line-height: 1.5;
+     font-family: Roboto, Arial, sans-serif;
+}
+
+h1, h2 {
+     font-family: "Roboto Slab";
 }
 
 
@@ -45,53 +52,39 @@ body {
 /* LAYOUT                   
 /*******************************************/
 
-/* Center the container */
-#container {
-     width: 400px;
-     margin: 20px auto;
-}
-
 
 .card {
      background: #FFF;
      width: 400px;
-     margin: 0px auto;
-     padding: 30px;
+     height: 600px;
+     margin: 20px auto;
+     padding: 20px;
      -webkit-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
      -moz-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
      box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
-     display: none;
+     overflow:scroll;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-
-     .card {
-          width: 95%;
-          background: grey;
-     }
-
-     .container {
-          width: 95%;
-     }
-
-
-}
-
-.card.active {
-     display:block;
-}
 
 .top-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width:400px;
+}
+
+.end-image {
+     display:block;
+     width:60%;
+     margin: 0 auto;
 }
 
 header {
-     color: #FF9E9D;
-     background: #FF9E9D;
-     height: 80px; 
+     color: #FFF;
+     background: #ef5350;
+     height: 70px; 
+     line-height: 50px;
+
 }
 
 footer {
@@ -104,28 +97,148 @@ footer {
 /*******************************************/
 
 
+nav {
+     width: 450px;
+     margin: 0 auto;
+     list-style-type: none;
+     vertical-align: bottom;
+     font-family: 'Roboto Slab', Roboto, sans-serif;
+     }
+
+nav ul {
+     list-style-type: none;
+}
+
 nav ul li {
      float:right;
 }
 
-     nav ul li a {
-          display:block;
-          height: 49px;
-          color:#FF3D7F;
-          padding: 30px 18px 0 18px;
-          text-decoration: none;
+nav .logo {
+     float: left;
+}
+
+nav .logo img {
+     height:50px;
      }
 
 
-.btn {
-     background: #3FB8AF;
+     nav li a {
+          display:block;
+          height: 20px;
+          color:#FFF;
+          padding: 10px;
+          text-decoration: none;
+
+     }
+
+/******************************************
+/* BUTTONS                 
+/*******************************************/
+
+
+
+.btn, .btn2 {
+     background: #009688;
      padding:10px;
      margin-top: 10px;
      color:#FFF;
      border-radius: 5px;
+     vertical-align: bottom;
+     cursor: pointer;
 }
 
-.btn:hover {
+
+
+.btn:hover, .btn2:hover {
      background: #7FC7AF;
+
+}
+
+
+.btn2 a {
+     text-decoration: none;
+     color:#FFF;
+}
+
+
+.btn2 a:hover {
+     text-decoration: none;
+     color:#FFF;
+}
+
+.btn2 a:visited {
+     text-decoration: none;
+     color:#FFF;
+}
+
+.btn2 a:active {
+     text-decoration: none;
+     color:#FFF;
+}
+
+
+
+.status {
+     font-size:.8em;
+}
+
+.description {
+     height:260px;
+     overflow:scroll;
+}
+
+.description-about {
+     height:490px;
+     overflow:scroll;
+ }
+
+ .description-end {
+     height:360px;
+     overflow:scroll;
+ }
+
+
+
+
+
+/******************************************
+/* RESPONSIVE                
+/*******************************************/
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
+
+     .card {
+          width: 320px;
+          height: 520px;
+     }
+
+     .description {
+          height:200px;
+     }
+
+     .description-about {
+          height:410px;
+     }
+
+     .description-end {
+          height:290px;
+     }
+
+     header {
+          height: 50px;
+          line-height: 35px;
+     }
+
+     nav {
+          width:340px;
+     }
+
+     nav .logo img {
+          height:35px;
+          }
+     .top-image {
+          width:320px;
+     }
 
 }

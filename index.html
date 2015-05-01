@@ -1,81 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="Your description goes here">
-    	<meta name="keywords" content="one, two, three">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="StartupAdventure is an interactive fiction experience where you get to take on the exciting life of a startup founder. This project was created by Jason Shen">
+	<meta name="keywords" content="startup, adventure, choose-your-own-adventure, entrepreneurship, founder, startups, interactive, fiction, game, choose, decision,">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>StartupAdventure: A Choose Your Story Game</title>
 	
-		<title>Startup Choose Your Own Adventure</title>
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- heap analytics -->
+	    <script type="text/javascript">
+      window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("910455879");
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://jasonshen.com/startupadventure/favicon.ico">
+
+</head>
+
+
+<body>
+
+	<header>
+		<nav>
+			<li class="logo"><a href=""><img src="img/startupadventure-logo.png"></a></li>
+        	<ul>
+                <li><a href="">Start Over</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+            </ul>
+       
+   	    </nav>            
+	</header> 
+
+<div id="wrapper">
+	<div class="card active" id="start">
+		<img class="top-image" src="img/header.png" >
+		<h2 class="title">The Journey Begins</h2>
+		<p class="status"><b>Your Status: </b> Wantrepreneur</p>
+		<p class="description">Welcome to StartupAdventure, a choose-your-own-story style experience where you get to step into the shoes of a startup founder! Make decisions and see how your choices affect your company and your destiny. Remember, once you make a choice, you can't go back...<br><br>Are you ready to take the leap?</p>
 		
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<header>
-				<nav>
-		       
-		            	<ul>
-			            	<li><a href="#">LOGO</a></li>
-			                <li><a href="#">About</a></li>
-			                <li><a href="#">Restart</a></li>
-		       
-		   	    </nav>            
-			</header> 
+		<div data-destination="step0" data-cardId="start" class="btn" data-impact="0">Begin the Journey</div>
+		<div class="btn2"><a href="about.html">About StartupAdventure</a></div>
 
-		<div id="container">
-			<div class="card active" id="intro">
-				<img id="lead" class="top-image" width="100" src="img/fandom_choose.svg" >
-				<p class="status"></p>
-				<h1>Auspicious Start</h1>
-				<p>This is the beginning of your journey. What is your startup?.</p>
-				<p>What do you do?</p>
-				<div id="intro-a" class="btn" href="#">HighFive (chat app)</a></div>
-				<div id="intro-b" class="btn" href="#">NewLux - subscription watch service</a></div>
-
-			</div>
+	</div>
 
 
-			<div class="card" id="next">
-				<img id="lead" class="top-image" width="100" src="img/fandom_clone.svg">
-								<p class="status"></p>
-				<h1>Continuing Forward</h1>
-				<p>Things are getting rough, who would you rather raise from?</p>
-				<p>What do you do?</p>
-					<div id="next-a" class="btn" href="#">Angel Investors</a></div>
-					<div id="next-b" class="btn" href="#">Venture Capitalists</a></div>
+	<script src="lib/jquery-1.11.2.js"></script>
+	<script src="data/data.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			</div>
+  ga('create', 'UA-11501991-1', 'auto');
+  ga('send', 'pageview');
 
-			<div class="card" id="end1">
-				<img id="lead" class="top-image" width="100" src="img/fandom_slice.svg">
-								<p class="status"></p>
-				<h1>Dead</h1>
-				<p>We're coming to the end of the journey. You ran out of money and died of dysentry.</p>
-				<p>What do you do?</p>
-					<div id="end1-a" class="btn" href="#">Start over!</a></div>
-					<div id="end1-b" class="btn" href="#">I'm done.</a></div>
+</script>
+</div>
+</body>
 
-			</div>
 
-			<div class="card" id="end2">
-				<img id="lead" class="top-image" width="100" src="img/fandom_slice.svg">
-				<h1>Acquihired</h1>
-								<p class="status"></p>
-				<p>We're coming to the end of the journey. You got poached by Uber and are now a Senior Product Manager with a .1% equity stake.</p>
-				<p>What do you do?</p>
-					<div id="end2-a" class="btn" href="#">Start over!</a></div>
-					<div id="end2-b" class="btn" href="#">I'm done.</a></div>
-
-			</div>
-			<br>
-
-			<a href="http://www.toicon.com/">Icons provided by to-icon</a>
-		</div>
-
-		<script src="lib/jquery-1.11.2.js"></script>
-		<script src="data/data.js"></script>
-		<script src="js/index.js"></script>
-		
-	</body>
 </html>
